@@ -7,29 +7,44 @@
 }
 
 body {
-    background-color: var(--gray-dark);
+    background: linear-gradient(90deg, var(--purple-dark1) 25%, var(--purple-dark4) 40%, var(--purple-dark2) 75%, var(--purple-dark1) 100%);
+    ;
 }
 
 // nav
+
 .navbar-flex {
-    display: flexbox;
-}
-
-
-.navbarBotones {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+background: var(--gray-dark);
+            background: linear-gradient(linear-gradient(90deg, var(--purple-dark4) 25%, var(--purple-dark2) 50%, var(--purple-dark3) 75%, var(--purple-dark4) 100%));
+       
+    .navbarLogo {
+        margin-left: 3em;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        h1{
+            align-self: center;
+            font-family: 'Montserrat Subrayada', sans-serif;
+            font-size: 2em;
+        }
+        
+    }
 
-ul {
-    list-style-type: none;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: var(--gray-dark);
-    background: linear-gradient(90deg, var(--purple-dark2) 49%, var(--purple-dark1) 100%);
+    .navbarBotones {
+margin-right: 20px;
+        ul {
+            list-style-type: none;
+            height: 40px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            }
+    }
 }
 
 li {
@@ -37,43 +52,101 @@ li {
     color: white;
     margin: 5px;
     margin-left: 10px;
+    
+    font-size: 1.2em;
 }
 
 // fin del nav - empieza introducción  -
 
 .introduccion {
     display: grid;
-grid-template-columns: 50% 20% 20% 10%;
-grid-template-rows: 60% 10% 10% 10%;
-.submitButton{
-    grid-column-start: 3;
-    grid-row-start: 3;
-}
+    grid-template-columns: 15% 15% 20% 20% 15% 15%;
+    grid-template-rows: 30% 15% 15% 10% 20%;
 
+
+    .catalogTitle {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        color: var(--purple-dark2);
+        text-shadow: black;
+        margin-left: -10px;
+        text-align: center;
+    }
+
+    .submitButton {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        height: 50px;
+    }
 
     // separador de grid y fondo //
-    background: url("/assets/img/firstbackground.png") no-repeat center fixed;
+    background: url("/assets/img/firstbackground.png") no-repeat center;
     background-size: cover;
-    height: 600px;
-    filter: grayscale(90%);
+    height: 95vh;
 }
 
-.submitButton{
-    display: inline-flex ;
+.submitButton {
+    display: inline-flex;
     background-color: var(--purple-dark4);
-    color:white;
-    justify-content:center;
+    color: white;
+    justify-content: center;
     align-items: center;
     border-radius: 20px;
     text-decoration: none;
 }
 
-// to do: agregarle un hover lindo al botón
+// fin primera introduccion, sigue el "quienes somos"
+
+.quienesSomos {
+    background: rgb(12, 0, 50);
+    background: radial-gradient(circle, rgba(12, 0, 50, 1) 5%, rgba(36, 0, 144, 1) 38%, rgba(53, 0, 211, 1) 51%, rgba(25, 0, 97, 1) 65%);
+    height: 35em;
+    display: flex;
+    border-top: 5px solid white;
+
+    .maquetado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
 
 
+        .introduccionTitle {
+            color: var(--purple-dark2);
+            font-size: 4em;
+            text-align: center;
+            align-self: flex-start;
+            z-index: 1;
+            margin-left: 1em;
+            margin-top: 1em;
+            background-color: white;
+        }
 
+        .introduccionDigest {
+            background-color: var(--purple-dark2);
+            color: white;
+            align-self: flex-end;
+            padding:1em;
+            font-size: 1.6em;
+            max-width: 10em;
+            z-index: 1;
+            margin-bottom: 2em;
+        }
 
+        .blackBox {
+            background-color: var(--gray-dark);
+            overflow: hidden;
+            position: absolute;
+            border-radius: 5%;
+            width: 300px;
+            height: 300px;
+            border: 3px groove white
+        }
 
+    }
+}
 
 
 

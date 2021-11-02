@@ -6,34 +6,61 @@
 }
 
 body {
-  background-color: var(--gray-dark);
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, var(--purple-dark1)), color-stop(40%, var(--purple-dark4)), color-stop(75%, var(--purple-dark2)), to(var(--purple-dark1)));
+  background: linear-gradient(90deg, var(--purple-dark1) 25%, var(--purple-dark4) 40%, var(--purple-dark2) 75%, var(--purple-dark1) 100%);
 }
 
 .navbar-flex {
-  display: flexbox;
-}
-
-.navbarBotones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: var(--gray-dark);
+  background: -webkit-gradient(linear, left top, left bottom, from(linear-gradient(90deg, var(--purple-dark4) 25%, var(--purple-dark2) 50%, var(--purple-dark3) 75%, var(--purple-dark4) 100%)));
+  background: linear-gradient(linear-gradient(90deg, var(--purple-dark4) 25%, var(--purple-dark2) 50%, var(--purple-dark3) 75%, var(--purple-dark4) 100%));
 }
 
-ul {
+.navbar-flex .navbarLogo {
+  margin-left: 3em;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navbar-flex .navbarLogo h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 2em;
+}
+
+.navbar-flex .navbarBotones {
+  margin-right: 20px;
+}
+
+.navbar-flex .navbarBotones ul {
   list-style-type: none;
   height: 40px;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: var(--gray-dark);
-  background: -webkit-gradient(linear, left top, right top, color-stop(49%, var(--purple-dark2)), to(var(--purple-dark1)));
-  background: linear-gradient(90deg, var(--purple-dark2) 49%, var(--purple-dark1) 100%);
 }
 
 li {
@@ -43,27 +70,38 @@ li {
   color: white;
   margin: 5px;
   margin-left: 10px;
+  font-size: 1.2em;
 }
 
 .introduccion {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 20% 20% 10%;
-      grid-template-columns: 50% 20% 20% 10%;
-  -ms-grid-rows: 60% 10% 10% 10%;
-      grid-template-rows: 60% 10% 10% 10%;
-  background: url("/assets/img/firstbackground.png") no-repeat center fixed;
+  -ms-grid-columns: 15% 15% 20% 20% 15% 15%;
+      grid-template-columns: 15% 15% 20% 20% 15% 15%;
+  -ms-grid-rows: 30% 15% 15% 10% 20%;
+      grid-template-rows: 30% 15% 15% 10% 20%;
+  background: url("/assets/img/firstbackground.png") no-repeat center;
   background-size: cover;
-  height: 600px;
-  -webkit-filter: grayscale(90%);
-          filter: grayscale(90%);
+  height: 95vh;
+}
+
+.introduccion .catalogTitle {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  color: var(--purple-dark2);
+  text-shadow: black;
+  margin-left: -10px;
+  text-align: center;
 }
 
 .introduccion .submitButton {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
   -ms-grid-row: 3;
       grid-row-start: 3;
+  height: 50px;
 }
 
 .submitButton {
@@ -80,6 +118,65 @@ li {
           align-items: center;
   border-radius: 20px;
   text-decoration: none;
+}
+
+.quienesSomos {
+  background: #0c0032;
+  background: radial-gradient(circle, #0c0032 5%, #240090 38%, #3500d3 51%, #190061 65%);
+  height: 35em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 5px solid white;
+}
+
+.quienesSomos .maquetado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quienesSomos .maquetado .introduccionTitle {
+  color: var(--purple-dark2);
+  font-size: 4em;
+  text-align: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  z-index: 1;
+  margin-left: 1em;
+  margin-top: 1em;
+  background-color: white;
+}
+
+.quienesSomos .maquetado .introduccionDigest {
+  background-color: var(--purple-dark2);
+  color: white;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1em;
+  font-size: 1.6em;
+  max-width: 10em;
+  z-index: 1;
+  margin-bottom: 2em;
+}
+
+.quienesSomos .maquetado .blackBox {
+  background-color: var(--gray-dark);
+  overflow: hidden;
+  position: absolute;
+  border-radius: 5%;
+  width: 300px;
+  height: 300px;
+  border: 3px groove white;
 }
 
 :root {
