@@ -76,10 +76,10 @@ li {
 .introduccion {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15% 15% 20% 20% 15% 15%;
-      grid-template-columns: 15% 15% 20% 20% 15% 15%;
-  -ms-grid-rows: 30% 15% 15% 10% 20%;
-      grid-template-rows: 30% 15% 15% 10% 20%;
+  -ms-grid-columns: 15% 25% 20% 20% 15% 15%;
+      grid-template-columns: 15% 25% 20% 20% 15% 15%;
+  -ms-grid-rows: 30% 30% 15% 10% 20%;
+      grid-template-rows: 30% 30% 15% 10% 20%;
   background: url("/assets/img/firstbackground.png") no-repeat center;
   background-size: cover;
   height: 95vh;
@@ -90,10 +90,13 @@ li {
       grid-column-start: 2;
   -ms-grid-row: 2;
       grid-row-start: 2;
-  color: var(--purple-dark2);
+  color: var(--purple-dark3);
   text-shadow: black;
   margin-left: -10px;
   text-align: center;
+  font-size: 2.7em;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-weight: 1000;
 }
 
 .introduccion .submitButton {
@@ -108,7 +111,7 @@ li {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  background-color: var(--purple-dark4);
+  background-color: var(--purple-dark3);
   color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -116,14 +119,15 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 20px;
+  border-radius: 40px;
+  border: 2px solid var(--purple-dark1);
   text-decoration: none;
 }
 
 .quienesSomos {
-  background: #0c0032;
-  background: radial-gradient(circle, #0c0032 5%, #240090 38%, #3500d3 51%, #190061 65%);
-  height: 35em;
+  background-image: url("/assets/img/skeleton.jpg");
+  background-size: 15%;
+  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,15 +150,18 @@ li {
 }
 
 .quienesSomos .maquetado .introduccionTitle {
+  font-family: 'Montserrat Subrayada', sans-serif;
   color: var(--purple-dark2);
-  font-size: 4em;
+  padding: 0.2em;
+  font-size: 3em;
   text-align: center;
   -ms-flex-item-align: start;
       align-self: flex-start;
   z-index: 1;
-  margin-left: 1em;
-  margin-top: 1em;
+  margin-left: 100px;
+  margin-top: 100px;
   background-color: white;
+  border-radius: 2px;
 }
 
 .quienesSomos .maquetado .introduccionDigest {
@@ -162,21 +169,24 @@ li {
   color: white;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding: 1em;
+  padding: 0.6em;
   font-size: 1.6em;
   max-width: 10em;
   z-index: 1;
-  margin-bottom: 2em;
+  margin-bottom: 50px;
+  margin-right: 4em;
+  border-radius: 5px;
+  border: 1px solid var(--gray-dark);
 }
 
 .quienesSomos .maquetado .blackBox {
-  background-color: var(--gray-dark);
+  background-color: black;
   overflow: hidden;
   position: absolute;
-  border-radius: 5%;
+  border-radius: 10px;
   width: 300px;
   height: 300px;
-  border: 3px groove white;
+  border: 3px solid var(--purple-dark3);
 }
 
 :root {
