@@ -2,7 +2,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 body {
@@ -47,12 +47,14 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
   font-size: 2em;
+  margin-bottom: 0%;
 }
 
 .navbar-flex .navbarBotones {
   margin-right: 20px;
+  margin-bottom: 0%;
 }
 
 .navbar-flex .navbarBotones ul {
@@ -67,10 +69,18 @@ li {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: white;
   margin: 5px;
   margin-left: 10px;
   font-size: 1.2em;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover {
+  background-color: var(--purple-dark1);
 }
 
 .introduccion {
@@ -78,8 +88,8 @@ li {
   display: grid;
   -ms-grid-columns: 15% 25% 20% 20% 15% 15%;
       grid-template-columns: 15% 25% 20% 20% 15% 15%;
-  -ms-grid-rows: 30% 30% 15% 10% 20%;
-      grid-template-rows: 30% 30% 15% 10% 20%;
+  -ms-grid-rows: 30% 20% 15% 10% 20%;
+      grid-template-rows: 30% 20% 15% 10% 20%;
   background: url("/assets/img/firstbackground.png") no-repeat center;
   background-size: cover;
   height: 95vh;
@@ -95,7 +105,7 @@ li {
   margin-left: -10px;
   text-align: center;
   font-size: 2.7em;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
   font-weight: 1000;
 }
 
@@ -127,66 +137,36 @@ li {
 .quienesSomos {
   background-image: url("/assets/img/skeleton.jpg");
   background-size: 15%;
-  height: 95vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 100vh;
   border-top: 5px solid white;
 }
 
 .quienesSomos .maquetado {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 5%;
+  margin-top: 5%;
 }
 
 .quienesSomos .maquetado .introduccionTitle {
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
   color: var(--purple-dark2);
-  padding: 0.2em;
-  font-size: 3em;
+  padding: 0.2em 20px 0 20px;
+  font-size: 2.6em;
+  width: 270px;
   text-align: center;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  z-index: 1;
-  margin-left: 100px;
-  margin-top: 100px;
   background-color: white;
   border-radius: 2px;
+  margin-bottom: 0;
 }
 
 .quienesSomos .maquetado .introduccionDigest {
   background-color: var(--purple-dark2);
   color: white;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  padding: 0.6em;
+  padding: 0.2em 20px 0 20px;
   font-size: 1.6em;
-  max-width: 10em;
+  max-width: 270px;
   z-index: 1;
-  margin-bottom: 50px;
-  margin-right: 4em;
-  border-radius: 5px;
-  border: 1px solid var(--gray-dark);
-}
-
-.quienesSomos .maquetado .blackBox {
-  background-color: black;
-  overflow: hidden;
-  position: absolute;
-  border-radius: 10px;
-  width: 300px;
-  height: 300px;
-  border: 3px solid var(--purple-dark3);
+  margin-right: auto;
+  text-align: center;
 }
 
 :root {
