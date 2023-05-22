@@ -8,7 +8,6 @@
 
 body {
     background: linear-gradient(90deg, var(--purple-dark1) 25%, var(--purple-dark4) 40%, var(--purple-dark2) 75%, var(--purple-dark1) 100%);
-    ;
 }
 
 // nav
@@ -18,8 +17,6 @@ body {
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-background: var(--gray-dark);
-            background: linear-gradient(linear-gradient(90deg, var(--purple-dark4) 25%, var(--purple-dark2) 50%, var(--purple-dark3) 75%, var(--purple-dark4) 100%));
        
     .navbarLogo {
         margin-left: 3em;
@@ -52,24 +49,29 @@ li {
     color: white;
     margin: 5px;
     margin-left: 10px;
-    
     font-size: 1.2em;
+    transition: 500ms;
+    cursor: pointer;
+    &:hover{
+        background-color:var(--purple-dark1);
+        padding: 0px 30px;
+        transition: 500ms;
+        transform : translateY(-0px);
+    }
 }
 
-// fin del nav - empieza introducción  -
+
 
 .introduccion {
-    display: grid;
-    grid-template-columns: 15% 25% 20% 20% 15% 15%;
-    grid-template-rows: 30% 30% 15% 10% 20%;
-
+    display: flex;
+    justify-content: center;
+    
+    background:url("/assets/img/firstbackground.png") no-repeat center;
+    background-size: cover;
+    height: 95vh;
 
     .catalogTitle {
-        grid-column-start: 2;
-        grid-row-start: 2;
-        color: var(--purple-dark3);
-        text-shadow: black;
-        margin-left: -10px;
+        color: white;
         text-align: center;
         font-size: 2.7em;
         font-family: 'Montserrat Subrayada', sans-serif;
@@ -77,42 +79,47 @@ li {
     }
 
     .submitButton {
-        grid-column-start: 2;
-        grid-row-start: 3;
-        height: 50px;
+        height: 55px;
+        width: 120px;
+        display: inline-flex;
+        background-color: var(--purple-dark3);
+        color: white;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition : 268ms;
+        transform: translateY(0);
+        &:hover{
+            background-color: var(--purple-dark4);
+            transition : 268ms;
+            padding: 0px 30px;
+            color: black;
+
+        }
     }
 
-    // separador de grid y fondo //
-    background:url("/assets/img/firstbackground.png") no-repeat center;
-    background-size: cover;
-    height: 95vh;
+    div.title {
+        display: flex;
+        justify-content: space-evenly;
+        height: fit-content;
+        width: stretch;
+        background: black
+    }
 }
 
-.submitButton {
-    display: inline-flex;
-    background-color: var(--purple-dark3);
-    color: white;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-    border: 2px solid var(--purple-dark1);
-    text-decoration: none;
-}
 
-// fin primera introduccion, sigue el "quienes somos"
+
 
 .quienesSomos {
     background-image: url("/assets/img/skeleton.jpg");
     background-size: 15%;
-    height: 95vh;
+    height: 105vh;
     display: flex;
-    border-top: 5px solid white;
 
     .maquetado {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 2em;
         margin-left: auto;
         margin-right: auto;
 
@@ -123,41 +130,156 @@ li {
             padding:0.2em;
             font-size: 3em;
             text-align: center;
-            align-self: flex-start;
             z-index: 1;
-            margin-left: 100px;
-            margin-top:100px;
             background-color: white;
-            border-radius: 2px;
+            position: relative;
+            bottom: 30%;
+            right: 15%;
         }
 
         .introduccionDigest {
             background-color: var(--purple-dark2);
             color: white;
-            align-self: flex-end;
-            padding:0.6em;
+            padding: 0.6em;
             font-size: 1.6em;
             max-width: 10em;
             z-index: 1;
-            margin-bottom: 50px;
             margin-right: 4em;
-            border-radius: 5px;
-            border: 1px solid var(--gray-dark)
+            position: relative;
+            top: 30%;
+            left: 25%;
         }
 
         .blackBox {
             
-            background-color: black;
+            background-image: url("/assets/img/polaroid.jpg");
+            background-size: 100%;
             overflow: hidden;
             position: absolute;
-            border-radius: 10px;
-            width: 300px;
-            height: 300px;
-            border: 3px solid var(--purple-dark3)
+            width: 600px;
+            height: 600px;
         }
 
     }
 }
+
+
+
+
+/* SEGUNDA SECCIÓN */
+
+
+.catalogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+.catalogText{
+    width:300px;
+    display: flex;
+    height: 100%;
+
+    justify-content: flex-start;
+    h3{
+            font-family: 'Montserrat Subrayada', sans-serif;
+            font-size: 2em;
+            text-align: center;
+            color: white;
+    }
+}
+
+
+  a img{
+    width: 300px;
+    height: 300px;
+    transition : 268ms;
+    transform: translateY(0);
+        &:hover{
+            background-color: black;
+            transition : 268ms;
+            padding: 30px;
+            transform: translateY(-0);
+  }}
+
+
+  .hilera1, .hilera2{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: -5px;
+  }
+  
+    /* footer */
+    .footer {
+      border-top: 5px solid white;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: var(--gray-dark);
+      color: white;
+      height:max-content;
+    }
+  
+  .formularioFlex{
+    margin-top: 10px;
+    max-width: 300px;
+    order:2;
+  }
+  
+    .formularioFlexInside{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width:350px;
+      max-width: 70%;
+      
+    }
+  
+    .formularioFlexInside label{
+      align-self: flex-start;
+    }
+    .formularioFlexInside input{
+      align-self: flex-start;
+      width:345px;
+      
+    }
+  .footer p{
+    order:1;
+  }
+  .contacto{
+    order:3;
+  }
+  .contacto a{
+    color:white;
+    transform:scale(2);
+    transition: transform 1s;
+    padding: 0px 5px 0 5px;
+  }
+  .redes{
+    margin-top:10px;
+  }
+  .contacto .redes :hover{
+    transition: transform 0.5s;
+    transform:scale(2);
+  }
+  .contacto a:hover{
+    color:gray;
+  }
+  
+  .botonEnviar{
+    margin-top: 10px;
+    width:120px;
+    height:40px;
+    cursor:pointer;
+  }
+
+
+
 
 
 

@@ -1,60 +1,36 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Subrayada:wght@400;700&family=Rubik:wght@400;700&display=swap");
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 body {
-  background: -webkit-gradient(linear, left top, right top, color-stop(25%, var(--purple-dark1)), color-stop(40%, var(--purple-dark4)), color-stop(75%, var(--purple-dark2)), to(var(--purple-dark1)));
   background: linear-gradient(90deg, var(--purple-dark1) 25%, var(--purple-dark4) 40%, var(--purple-dark2) 75%, var(--purple-dark1) 100%);
 }
 
 .navbar-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: var(--gray-dark);
-  background: -webkit-gradient(linear, left top, left bottom, from(linear-gradient(90deg, var(--purple-dark4) 25%, var(--purple-dark2) 50%, var(--purple-dark3) 75%, var(--purple-dark4) 100%)));
-  background: linear-gradient(linear-gradient(90deg, var(--purple-dark4) 25%, var(--purple-dark2) 50%, var(--purple-dark3) 75%, var(--purple-dark4) 100%));
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .navbar-flex .navbarLogo {
   margin-left: 3em;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-item-align: center;
-      align-self: center;
+  flex-direction: row;
+  align-self: center;
 }
-
 .navbar-flex .navbarLogo h1 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  align-self: center;
+  font-family: "Montserrat Subrayada", sans-serif;
   font-size: 2em;
 }
-
 .navbar-flex .navbarBotones {
   margin-right: 20px;
 }
-
 .navbar-flex .navbarBotones ul {
   list-style-type: none;
   height: 40px;
@@ -64,129 +40,222 @@ body {
 }
 
 li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   color: white;
   margin: 5px;
   margin-left: 10px;
   font-size: 1.2em;
+  transition: 500ms;
+  cursor: pointer;
+}
+li:hover {
+  background-color: var(--purple-dark1);
+  padding: 0px 30px;
+  transition: 500ms;
+  transform: translateY(0px);
 }
 
 .introduccion {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 15% 25% 20% 20% 15% 15%;
-      grid-template-columns: 15% 25% 20% 20% 15% 15%;
-  -ms-grid-rows: 30% 30% 15% 10% 20%;
-      grid-template-rows: 30% 30% 15% 10% 20%;
+  display: flex;
+  justify-content: center;
   background: url("/assets/img/firstbackground.png") no-repeat center;
   background-size: cover;
   height: 95vh;
 }
-
 .introduccion .catalogTitle {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  color: var(--purple-dark3);
-  text-shadow: black;
-  margin-left: -10px;
+  color: white;
   text-align: center;
   font-size: 2.7em;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
   font-weight: 1000;
 }
-
 .introduccion .submitButton {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  height: 50px;
-}
-
-.submitButton {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  height: 55px;
+  width: 120px;
   display: inline-flex;
   background-color: var(--purple-dark3);
   color: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 40px;
-  border: 2px solid var(--purple-dark1);
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
+  transition: 268ms;
+  transform: translateY(0);
+}
+.introduccion .submitButton:hover {
+  background-color: var(--purple-dark4);
+  transition: 268ms;
+  padding: 0px 30px;
+  color: black;
+}
+.introduccion div.title {
+  display: flex;
+  justify-content: space-evenly;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  background: black;
 }
 
 .quienesSomos {
   background-image: url("/assets/img/skeleton.jpg");
   background-size: 15%;
-  height: 95vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 105vh;
   display: flex;
-  border-top: 5px solid white;
 }
-
 .quienesSomos .maquetado {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 2em;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
-
 .quienesSomos .maquetado .introduccionTitle {
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
   color: var(--purple-dark2);
   padding: 0.2em;
   font-size: 3em;
   text-align: center;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   z-index: 1;
-  margin-left: 100px;
-  margin-top: 100px;
   background-color: white;
-  border-radius: 2px;
+  position: relative;
+  bottom: 30%;
+  right: 15%;
 }
-
 .quienesSomos .maquetado .introduccionDigest {
   background-color: var(--purple-dark2);
   color: white;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   padding: 0.6em;
   font-size: 1.6em;
   max-width: 10em;
   z-index: 1;
-  margin-bottom: 50px;
   margin-right: 4em;
-  border-radius: 5px;
-  border: 1px solid var(--gray-dark);
+  position: relative;
+  top: 30%;
+  left: 25%;
 }
-
 .quienesSomos .maquetado .blackBox {
-  background-color: black;
+  background-image: url("/assets/img/polaroid.jpg");
+  background-size: 100%;
   overflow: hidden;
   position: absolute;
-  border-radius: 10px;
+  width: 600px;
+  height: 600px;
+}
+
+/* SEGUNDA SECCIÓN */
+.catalogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+}
+
+.catalogText {
+  width: 300px;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+}
+.catalogText h3 {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+}
+
+a img {
   width: 300px;
   height: 300px;
-  border: 3px solid var(--purple-dark3);
+  transition: 268ms;
+  transform: translateY(0);
+}
+a img:hover {
+  background-color: black;
+  transition: 268ms;
+  padding: 30px;
+  transform: translateY(0);
+}
+
+.hilera1, .hilera2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: -5px;
+}
+
+/* footer */
+.footer {
+  border-top: 5px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--gray-dark);
+  color: white;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.formularioFlex {
+  margin-top: 10px;
+  max-width: 300px;
+  order: 2;
+}
+
+.formularioFlexInside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  max-width: 70%;
+}
+
+.formularioFlexInside label {
+  align-self: flex-start;
+}
+
+.formularioFlexInside input {
+  align-self: flex-start;
+  width: 345px;
+}
+
+.footer p {
+  order: 1;
+}
+
+.contacto {
+  order: 3;
+}
+
+.contacto a {
+  color: white;
+  transform: scale(2);
+  transition: transform 1s;
+  padding: 0px 5px 0 5px;
+}
+
+.redes {
+  margin-top: 10px;
+}
+
+.contacto .redes :hover {
+  transition: transform 0.5s;
+  transform: scale(2);
+}
+
+.contacto a:hover {
+  color: gray;
+}
+
+.botonEnviar {
+  margin-top: 10px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
 }
 
 :root {
@@ -195,5 +264,4 @@ li {
   --purple-dark3: #240090;
   --purple-dark4: #3500d3;
   --gray-dark: #282828;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
