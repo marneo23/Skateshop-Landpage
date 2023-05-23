@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Subrayada:wght@400;700&family=Rubik:wght@400;700&display=swap");
 * {
   margin: 0px;
@@ -41,18 +40,24 @@ body {
 
 li {
   display: inline-flex;
-  color: white;
   margin: 5px;
   margin-left: 10px;
   font-size: 1.2em;
   transition: 500ms;
-  cursor: pointer;
 }
 li:hover {
   background-color: var(--purple-dark1);
   padding: 0px 30px;
   transition: 500ms;
   transform: translateY(0px);
+}
+li a {
+  color: white;
+  text-decoration: none;
+}
+li a:visited {
+  color: white;
+  text-decoration: none;
 }
 
 .introduccion {
@@ -82,10 +87,10 @@ li:hover {
   transform: translateY(0);
 }
 .introduccion .submitButton:hover {
-  background-color: var(--purple-dark4);
   transition: 268ms;
   padding: 0px 30px;
-  color: black;
+  color: white;
+  background-color: var(--purple-dark4);
 }
 .introduccion div.title {
   display: flex;
@@ -144,7 +149,6 @@ li:hover {
   height: 600px;
 }
 
-/* SEGUNDA SECCIÓN */
 .catalogo {
   display: flex;
   flex-direction: row;
@@ -166,24 +170,23 @@ li:hover {
   color: white;
 }
 
-a img {
-  width: 300px;
-  height: 300px;
-  transition: 268ms;
-  transform: translateY(0);
-}
-a img:hover {
-  background-color: black;
-  transition: 268ms;
-  padding: 30px;
-  transform: translateY(0);
-}
-
 .hilera1, .hilera2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: -5px;
+}
+.hilera1 a img, .hilera2 a img {
+  width: 300px;
+  height: 300px;
+  transition: 268ms;
+  transform: translateY(0);
+}
+.hilera1 a img:hover, .hilera2 a img:hover {
+  background-color: black;
+  transition: 268ms;
+  padding: 10px;
+  transform: translateY(0);
 }
 
 /* footer */
@@ -195,8 +198,7 @@ a img:hover {
   align-items: center;
   background-color: var(--gray-dark);
   color: white;
-  height: -moz-max-content;
-  height: max-content;
+  height: 26vh;
 }
 
 .formularioFlex {
@@ -224,31 +226,25 @@ a img:hover {
 }
 
 .footer p {
-  order: 1;
-}
-
-.contacto {
   order: 3;
 }
 
-.contacto a {
+.contacto {
+  order: 1;
+}
+.contacto .redes a {
   color: white;
-  transform: scale(2);
-  transition: transform 1s;
   padding: 0px 5px 0 5px;
+  transition: 0.5s;
+}
+.contacto .redes a:hover {
+  color: gray;
+  padding: 10px;
+  transition: 0.5s;
 }
 
 .redes {
   margin-top: 10px;
-}
-
-.contacto .redes :hover {
-  transition: transform 0.5s;
-  transform: scale(2);
-}
-
-.contacto a:hover {
-  color: gray;
 }
 
 .botonEnviar {
@@ -258,10 +254,108 @@ a img:hover {
   cursor: pointer;
 }
 
+/*Login*/
+.bodyLogin {
+  background-image: url("/assets/img/skeleton.jpg");
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: black;
+  color: white;
+  border-radius: 5%;
+  border: white 5px solid;
+}
+.form input {
+  display: flex;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.form h2 {
+  margin-bottom: 15px;
+}
+.form .button {
+  border-radius: 18px;
+  cursor: pointer;
+  color: #000000;
+  font-size: 12px;
+  padding: 15px 25px;
+  left: 25%;
+  position: relative;
+}
+.form a {
+  color: var(--purple-dark4);
+  text-decoration: none;
+}
+.form a:visited {
+  color: var(--purple-dark4);
+}
+
+/*Register*/
+.form.register {
+  padding: 20px;
+}
+.form.register input {
+  padding: 10px;
+  width: 35em;
+}
+.form.register .button {
+  text-align: center;
+  margin-top: 5px;
+  left: 0%;
+}
+
+.preferences {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  float: left;
+  clear: none;
+}
+.preferences label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.preferences label input[type=radio], .preferences label input[type=checkbox] {
+  width: 15px;
+  margin: -3px 2px 0px 15px;
+}
+
 :root {
   --purple-dark1: #0c0032;
   --purple-dark2: #190061;
   --purple-dark3: #240090;
   --purple-dark4: #3500d3;
   --gray-dark: #282828;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 1366px) {
+  a img {
+    width: 170px;
+    height: 170px;
+  }
+  .blackBox {
+    width: 100px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  a img {
+    width: 100px;
+    height: 100px;
+  }
+  .blackBox {
+    width: 100px;
+    height: 300px;
+    background-size: 50%;
+  }
 }/*# sourceMappingURL=styles.css.map */

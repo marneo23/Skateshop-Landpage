@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar-flex">
+        <div class="navbarLogo">
+            <div class="logo">
+            <i class="fab fa-d-and-d fa-3x"></i></div>
+                <h1>HAKU</h1>
+        </div>
+        <ul class="navbarBotones">
+            <li class="navButtons"><a href="index.html">Home</a></li>
+            <li class="navButtons"><a href=#footer>Contacto</a></li>
+            <li class="navButtons"><a href="login.html">Login</a></li>
+            <li class="navButtons"><a href="register.html">Registrarse</a></li>
+        </ul>
+        </div>
+            </nav>
+
+
+        <div class="center bodyLogin">
+    
+    
+            <form class="form register">
+            <h2>Registrarse</h2>
+    <div class="inputText">
+        <label for="nombre">Nombre:</label>
+        <input type="text" placeholder="Nombre/s"  name="nombre" id="nombre" required>
+    </div>
+    <div class="inputText">
+        <label for="apellido">Apellido:</label>
+        <input type="text" placeholder="Apellido/s" required name="apellido" id="apellido">
+    </div>
+    <div class="inputText">
+        <label for="regemail">Correo Electrónico:</label>
+        <input type="email" placeholder="Correo Electrónico" required name="regemail" id="regemail">
+    </div>
+    <div class="inputText">
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input type="date" name="nacimiento" id="nacimiento" required>
+    </div>
+    <div class="inputText">
+        <label for="user">Nombre de usuario:</label>
+        <input type="text" placeholder="Nombre de usuario" required name="user" id="user">
+    </div>
+    <div class="inputText">
+        <label for="pass">Contraseña:</label>
+        <input type="password" placeholder="Contraseña" required name="pass" id="pass">
+    </div>
+    
+
+        <div class="preferences">
+            <label>¿Querés ser miembro de H-Club?
+                <input type="radio" required name="vipsi" id="vip" checked>
+               <label for="vipsi">Sí</label> 
+                <input type="radio" required name="vipno" id="vip">
+               <label for="vipno"> No</label>
+                </label>
+            
+                <label>
+                    <input type="checkbox" required name="newsletter" id="newsletter" checked>
+                    Quiero recibir notificaciones con novedades y ofertas de la tienda
+                </label>
+            
+                <label required>
+                    <input type="checkbox" required name="agreement" id="agreement" checked>
+                    He leido y acepto los <a href="#">Terminos y Condiciones</a>
+                </label>
+            
+            </div>
+            <input class="button" value="Registrarse">
+
+        
+    </form>
+        </div>
+  
+</body>
+</html>
